@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-1">
+            <div class="center">
+                
+            </div>
+        </div>
+
+        <div class="col-sm-10">
+            <div class="center">
+                <h2>
+                    {{ num }}
+                </h2>
+                <p>【見本】</p>
+                <img src="data:image/png;base64,{{ans_img}}"/>
+                
+                <p>見本と同じ画像をクリックしてね</p>
+                <form>
+                    <table  class="table table-bordered">
+                        <tr>
+                            <td>
+                                <button name="ans" value={{answers[1]}}><img src="data:image/png;base64,{{btn_imgs.samp01}}" width="100%"/></button>
+                            </td>
+                            <td>
+                                <button name="ans" value={{answers[2]}}><img src="data:image/png;base64,{{btn_imgs.samp02}}" width="100%"/></button>
+                            </td>
+                            <td>
+                                <button name="ans" value={{answers[3]}}><img src="data:image/png;base64,{{btn_imgs.samp03}}" width="100%"/></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button name="ans" value={{answers[4]}}><img src="data:image/png;base64,{{btn_imgs.samp04}}" width="100%"/></button>
+                            </td>
+                            <td>
+                                <button name="ans" value={{answers[5]}}><img src="data:image/png;base64,{{btn_imgs.samp05}}" width="100%"/></button>
+                            </td>
+                            <td>
+                                <button name="ans" value={{answers[6]}}><img src="data:image/png;base64,{{btn_imgs.samp06}}" width="100%"/></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button name="ans" value={{answers[7]}}><img src="data:image/png;base64,{{btn_imgs.samp07}}" width="100%"/></button>
+                            </td>
+                            <td>
+                                <button name="ans" value={{answers[8]}}><img src="data:image/png;base64,{{btn_imgs.samp08}}" width="100%"/></button>
+                            </td>
+                            <td>
+                                <button name="ans" value={{answers[9]}}><img src="data:image/png;base64,{{btn_imgs.samp09}}" width="100%"/></button>
+                            </td>
+                        </tr>
+  
+                    </table>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-sm-1">
+            <div class="center">
+                
+            </div>
+        </div>
+    </div>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+</div>
+
+{% endblock %}

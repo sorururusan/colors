@@ -1,0 +1,79 @@
+body{
+   margin:30px;
+   background-color:rgba(0, 0, 0, 0.486);
+   text-align: center;
+}
+
+h1{
+  color: white;
+  font-size:30px;
+}
+
+h2{
+   font-size:20px;
+}
+
+p{
+   font-size:20px;
+}
+
+span{
+  display: block;
+}
+
+button{
+  /*
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  */
+  appearance: none;
+  border: none;
+}
+
+.wrapper{
+  min-height: 100vh;
+  position: relative;/*←相対位置*/
+  padding-bottom: 120px;/*←footerの高さ*/
+  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
+
+footer{
+  width: 100%;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 30px 0;
+
+position: relative;/*相対位置*/
+  bottom: 0; /*下に固定*/
+}
+
+.marker{
+    background-color:rgb(0, 0, 0);
+    font-size:larger;
+    color: white;
+}
+.center{
+  text-align: center;
+}
+
+.right{
+  text-align: right;
+}
+
+.promo::before {
+	content: "\A" ;
+	white-space: pre ;
+}
+
+.promo{
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.promo::after {
+	content: "\A" ;
+	white-space: pre ;
+}

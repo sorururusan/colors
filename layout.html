@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="description" content="{{metatags.description}}">
+        <meta name="keywords" content="{{metatags.keywords}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:creator" content="@dia1836">
+        <meta name="twitter:title" content="ランダムカラーズ">
+        <meta name="twitter:description" content="{{metatags.description}}">
+        <meta name="twitter:image" content="https://trendy.sub.jp/colors/static/thumb.png">
+        <meta property="og:url" content="https://trendy.sub.jp/colors/" />
+        <meta property="og:title" content="ランダムカラーズ" />
+        <meta property="og:description" content="{{metatags.description}}" />
+        <meta property="og:image" content="https://trendy.sub.jp/colors/static/thumb.png" />
+        
+        <!--  CSS -->
+           <!-- <link rel="stylesheet" href="../static/style.css"> -->
+           <link rel="stylesheet" href="{{ staticfile('style.css') }}">
+
+           <!-- Bootstrap CSS -->
+           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- googleアドセンス用 -->
+        <script data-ad-client="ca-pub-5000828470646498" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7VJMXLZ25R"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7VJMXLZ25R');
+        </script>
+
+        <title>{{title}}</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="navbar navbar-dark bg-dark box-shadow">
+                <a href="./" class="navbar-brand d-flex align-items-center">
+                    <h1><i>ランダムカラーズ</i></h1>
+                </a>
+                    
+                <div class="container d-flex justify-content-between">
+                    <span class="navbar-text"><h2 style="font-size: 16px;">ランダムに配色を生成するジェネレーター<br>カラーコードとRGBを表示</h2></span>
+                    
+                
+                    <!-- レスポンシブメニュー -->
+                    <nav class="navbar navbar-expand-sm navbar-dark bg-dark mr-auto">
+                        <!-- ドロップダウン -->
+                        <div class="dropdown">
+                            <button type="button" id="dropdown1"
+                                class="btn btn-dark dropdown-toggle"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                                配色生成
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdown1">
+                            <a class="dropdown-item" href="./howto">使い方</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="./">全色</a>
+                            <a class="dropdown-item" href="./?radio=cb5">パステルカラー</a>
+                            <a class="dropdown-item" href="./?radio=cb6">ビビッドカラー</a>
+                            <a class="dropdown-item" href="./?radio=cb10">ダークカラー</a>
+                            <a class="dropdown-item" href="./?radio=cb7">赤系統</a>
+                            <a class="dropdown-item" href="./?radio=cb8">緑系統</a>
+                            <a class="dropdown-item" href="./?radio=cb9">青系統</a>
+                            <a class="dropdown-item" href="./?radio=cb11">グレースケール</a>
+                            </div>
+                        </div>
+
+                        <!-- ドロップダウン -->
+                        <div class="dropdown">
+                            <button type="button" id="dropdown1"
+                                class="btn btn-dark dropdown-toggle"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                                色ゲーム
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdown1">
+                            <a class="dropdown-item" href="./start">脳トレゲーム</a>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-dark nav-item" onclick="location.href='./gradation'">グラデーション</button>
+                        
+                        <button type="button" class="btn btn-dark nav-item" onclick="location.href='./compcolor'">補色</button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        {% block content %}
+        <!-- ここにメインコンテンツを書く -->
+        {% endblock %}
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+
+    <footer class="center">
+        {% autoescape false %}
+
+            {{tweetbtn}}
+
+        {% endautoescape %}
+
+        <div class="my-3">
+            <button class="btn-primary" onclick="location.href='https://twitter.com/rurururu_web'"">お問い合わせ</button>
+        </div>
+        <div class="my-3">
+            <i>(C) 2021 ランダムカラーズ</i>
+        </div>
+    </footer>
+</html>

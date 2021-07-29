@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="center">
+                
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="center">
+                <h2>グラデーション生成</h2>
+                <form>
+                    <table class="table table-bordered">
+                        <tr><td bgcolor={{ colors.c1 }}>{{ colors.c1 }}<br><label>色を選択<input type="color" value={{ colors.c1 }} name="c1"></label></td></tr>
+                        <tr><td bgcolor={{ colors.c2 }}>{{ colors.c2 }}<br>{{ rgbs.rgb2 }}</td></tr>
+                        <tr><td bgcolor={{ colors.c3 }}>{{ colors.c3 }}<br>{{ rgbs.rgb3 }}</td></tr>
+                        <tr><td bgcolor={{ colors.c4 }}>{{ colors.c4 }}<br>{{ rgbs.rgb4 }}</td></tr>
+                        <tr><td bgcolor={{ colors.c5 }}>{{ colors.c5 }}<br><label>色を選択<input type="color" value={{ colors.c5 }} name="c5"></label></td></tr>
+                    </table>
+
+                    <button type="submit" class="btn btn-dark">生成</button>
+                </form>
+                {% autoescape false %}
+                {% endautoescape %}
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="center">
+                <p>使い方</p>                
+                <div class='left'>                
+                    <p>①上下の[色を選択]の右にあるカラーピッカーをクリックして色を選択します。</p>
+                    <p></p>                
+                    <p>②[生成]ボタンをクリックします。</p>
+                    <p></p>                
+                    <p>③選択した色の中間色が自動で生成されます。</p>              
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+</div>
+
+{% endblock %}

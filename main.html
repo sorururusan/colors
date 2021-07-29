@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="center">
+                
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="center">
+                <form>
+                    <table class="table">
+                        <tr><th>RGB</th><th>固定</th></tr>
+                        <tr><td bgcolor={{ colors.c1 }}>{{ colors.c1 }}<br>{{ rgbs.rgb1 }}</td><td><input class="form-check-input" type="checkbox" name="cb1" value={{ colors.c1 }}+{{ rgbs.rgb1 }} {{ check.cb1}}></td></tr>
+                        <tr><td bgcolor={{ colors.c2 }}>{{ colors.c2 }}<br>{{ rgbs.rgb2 }}</td><td><input class="form-check-input" type="checkbox" name="cb2" value={{ colors.c2 }}+{{ rgbs.rgb2 }} {{ check.cb2}}></td></tr>
+                        <tr><td bgcolor={{ colors.c3 }}>{{ colors.c3 }}<br>{{ rgbs.rgb3 }}</td><td><input class="form-check-input" type="checkbox" name="cb3" value={{ colors.c3 }}+{{ rgbs.rgb3 }} {{ check.cb3}}></td></tr>
+                        <tr><td bgcolor={{ colors.c4 }}>{{ colors.c4 }}<br>{{ rgbs.rgb4 }}</td><td><input class="form-check-input" type="checkbox" name="cb4" value={{ colors.c4 }}+{{ rgbs.rgb4 }} {{ check.cb4}}></td></tr>
+                    </table>
+
+                    <p>
+                        <div class="form-group">
+                            <table class="table">
+                                <tr><th style="border:none" colspan="12">絞り込み</th></tr>
+                                <tr>
+                                    <td colspan="4">
+                                        全色
+                                        <input type="radio" name="radio" id="all" checked>
+                                    </td>
+                                    <td colspan="4">
+                                        パステルカラー
+                                        <input type="radio" name="radio" id="pastel" value="cb5" {{ check.cb5}}>
+                                    </td>
+                                    <td colspan="4">
+                                        ビビッドカラー
+                                        <input type="radio" name="radio" id="vivid"  value="cb6" {{ check.cb6}}>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="3">
+                                        赤系統
+                                        <input type="radio" name="radio" id="red"    value="cb7" {{ check.cb7}}>
+                                    </td>
+                                    <td colspan="3">
+                                        緑系統
+                                        <input type="radio" name="radio" id="green"  value="cb8" {{ check.cb8}}>
+                                    </td>
+                                    <td colspan="3">
+                                        青系統
+                                        <input type="radio" name="radio" id="blue"   value="cb9" {{ check.cb9}}>
+                                    </td>
+                                    <td colspan="3">
+                                        ダークカラー
+                                        <input type="radio" name="radio" id="dark"   value="cb10" {{ check.cb10}}>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="12">
+                                        グレースケール
+                                        <input type="radio" name="radio" id="gray"   value="cb11" {{ check.cb11}}>
+                                    </td>
+                                </tr>
+                                </table>
+                            </table>
+                        </div>
+                    </p>
+                    <input class="btn btn-dark" type="submit" value="生成">
+                </form>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="center">
+                <h4>配色パターン</h4>
+                <h5>2色</h5>
+                    <img src="data:image/png;base64,{{imgs.samp2_1}}" alt="配色パターン 2色" />
+                    <img src="data:image/png;base64,{{imgs.samp2_2}}" alt="配色パターン 2色" />
+                    <img src="data:image/png;base64,{{imgs.samp2_3}}" alt="配色パターン 2色" />
+                    <img src="data:image/png;base64,{{imgs.samp2_4}}" alt="配色パターン 2色" />
+                <h5>3色</h5>
+                    <img src="data:image/png;base64,{{imgs.samp3_1}}" alt="配色パターン 3色" />
+                    <img src="data:image/png;base64,{{imgs.samp3_2}}" alt="配色パターン 3色" />
+                    <img src="data:image/png;base64,{{imgs.samp3_3}}" alt="配色パターン 3色" />
+                    <img src="data:image/png;base64,{{imgs.samp3_4}}" alt="配色パターン 3色" />
+                <h5>4色</h5>
+                    <img src="data:image/png;base64,{{imgs.samp4_1}}" alt="配色パターン 4色" />
+                    <img src="data:image/png;base64,{{imgs.samp4_2}}" alt="配色パターン 4色" />
+                    <img src="data:image/png;base64,{{imgs.samp4_3}}" alt="配色パターン 4色" />
+                    <img src="data:image/png;base64,{{imgs.samp4_4}}" alt="配色パターン 4色" />
+
+            </div>
+        </div>
+    </div>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    
+    <div class="center">
+        <br>固定のチェックを入れてから生成ボタンを一度押すと作った配色を共有できます<br>↓
+    </div>
+</div>
+
+{% endblock %}

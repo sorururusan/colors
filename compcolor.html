@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+
+        <div class="col-sm-4">
+            <div class="center">
+                <h2>補色生成</h2>
+                <form>
+                    <table class="table table-bordered">
+                        <tr><th>選択色</th><th>補色</th></tr>
+                        <tr><td bgcolor={{ colors.c1 }}><input type="color" value={{ colors.c1 }} name="c1"></td><td bgcolor={{ colors.c2 }}>{{ colors.c2 }}<br>{{ rgbs.rgb2 }}</td></tr>
+                    </table>
+
+                    <button type="submit" class="btn btn-dark">生成</button>
+                </form>
+
+                <script>
+                    function inputChange(){
+                        c1td.style.background = c1p.Value
+                    }
+
+                    let c1td = document.getElementById('c1td');
+                    let c1p = document.getElementById('c1p');
+                    
+                    c1p.addEventListener('change', inputChange);
+                </script>
+                {% autoescape false %}
+                {% endautoescape %}
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="center">
+                <p class=" px-2 pb-3 text-xl">補色とは</p>
+                <p>ある色を引き立たせる効果がある色</p>
+            </div>
+        </div>
+    </div>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+</div>
+
+{% endblock %}
